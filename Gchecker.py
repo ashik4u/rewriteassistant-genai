@@ -3,7 +3,7 @@ import keyboard
 import time
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyDzMJcYZDf_xri4nsHwScg3MvTxyDGtF_U")
+genai.configure(api_key="YOUR_GEMINI_API_KEY")
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 def grammar_and_rewrite(text):
