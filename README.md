@@ -21,8 +21,8 @@ Trigger rewrites with a **hotkey**, switch **tone/style**, run silently in the *
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/ashik4u/rewriteassistant-genai.git
-cd clipboard-rewriter
+git clone https://github.com/ashik4u/clipboard-rewriter-genai.git
+cd clipboard-rewriter-genai
 ```
 
 ### 2. Install dependencies
