@@ -1,27 +1,82 @@
-# ✨ Clipboard Rewriter — Gemini-Powered Text Polisher
+2. Install dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Or install manually:
 
-Clipboard Rewriter is a lightweight Python desktop app that uses **Google Gemini 1.5 Flash** to instantly **fix grammar** and **rewrite copied text**.  
-Trigger rewrites with a **hotkey**, switch **tone/style**, run silently in the **system tray**, and get real-time **Windows notifications**.
+bash
+Copy
+Edit
+pip install pyperclip keyboard pystray pillow winotify google-generativeai
+3. Set your Gemini API Key
+Open the script and replace the line:
 
+python
+Copy
+Edit
+genai.configure(api_key="YOUR_GEMINI_API_KEY")
+Get your API key from: https://aistudio.google.com/app/apikey
+
+▶️ Usage
+Run the script:
+
+bash
+Copy
+Edit
+python clipboard_rewriter.py
+Press Ctrl+Shift+B to rewrite any copied text.
+
+Right-click the tray icon to:
+
+✅ Enable/Disable rewriting
+
+🔁 Change writing style
+
+📂 View rewrite history
+
+❌ Exit the app
+
+🖼 Tray Menu Options
+Option	Description
+✍️ Enable/Disable	Toggle rewriting functionality
+🔁 Change Style	Switch between formal/casual/business
+📂 View Log File	Opens local rewrite log
+❌ Exit	Quit the app
+
+📂 Rewrite Log
+All rewrites are saved to rewrite_log.txt in this format:
+
+yaml
+Copy
+Edit
 ---
+Original:
+Your original text...
 
-![screenshot](https://your-screenshot-link-if-needed.png)
+Rewritten:
+Your improved Gemini-polished version...
+📦 Build to .exe (optional)
+To package the app into a portable .exe:
 
-## 🚀 Features
+bash
+Copy
+Edit
+pip install pyinstaller
+pyinstaller --onefile --noconsole clipboard_rewriter.py
+Output will appear in the dist/ folder.
 
-- 🧠 Powered by **Google Gemini 1.5 Flash**
-- 📝 One-hotkey **clipboard rewrite** (`Ctrl + Shift + B`)
-- 🔁 **Writing style switcher**: Formal / Casual / Business
-- 📌 **System tray app** with right-click menu
-- 🔔 **Native Windows toast notifications**
-- 💾 Automatically **logs rewrite history**
-- 🪶 Lightweight, **background-friendly** tool
+💡 Future Ideas
+🔒 Custom rewrite prompt profiles
 
----
+🧠 GPT + Gemini toggle
 
-## 🔧 Installation
+🌐 Multi-language support
 
-### 1. Clone the repo
-```bash
-git clone https://github.com/your-username/clipboard-rewriter.git
-cd clipboard-rewriter
+🖥️ Auto-start with Windows
+
+🧠 Credits
+Google Gemini
+winotify
+pystray
+
