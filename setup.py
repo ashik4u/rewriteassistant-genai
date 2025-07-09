@@ -16,7 +16,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'clipboard-rewriter=rewriteassistant-genai:main'
+            'clipboard-rewriter=clipboard-rewriter-genai:main'
         ]
     },
 )
